@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
+    <title>Đăng Ký</title>
     <!-- embed FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- css-->
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/sign-up.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
@@ -37,35 +37,49 @@
     <div class="login">
         <div class="login-container">
 
-            <h1 class="login-headding">Login</h1>
-            <img class="img-avata" src="assets/img/gif-avatar.gif" alt="">
+            <h1 class="login-headding">SIGN UP</h1>
 
             <form action="https://api-gateway.fullstack.edu.vn/action_page.php" class="login-form">
-                <label for="username" class="login-label">Username</label>
-                <!-- Username -->
-                <div class="login-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-                    <style>svg{fill:#293a56}</style>
-                    <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
-                    <input class="login-input" type="text" placeholder="Type your username" id="username" name="Username" required>
+
+                <div class="inputBox">
+                    <input required="" type="text" name="Email or Phone">
+                    <span>Email or Phone</span>
                 </div>
 
-                <label for="password" class="login-label">Password</label>
-                <!-- Password -->
-                <div class="login-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
-                    <style>svg{fill:#404a5c}</style>
-                    <path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
-                    <input class="login-input" type="password" placeholder="Password" id="password" name="Password" required>
-                    <!-- eye -->
-                    <div id="eye">
-                        <svg class="fa-eye" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
-                    </div>
+                <div class="inputBox">
+                    <input required="" type="text" name="Username">
+                    <span>Username</span>
                 </div>
-                <a href="" class="link">Forgot password?</a>
+
+                <div class="inputBox">
+                    <input required="" type="password" name="Password">
+                    <span>Password</span>
+                </div>
+
+                <div class="inputBox">
+                    <input required="" type="password" name="Enter the password">
+                    <span>
+                        Enter the password</span>
+                </div>
+                <!-- checkbox -->
+                <div class="check">
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <div class="checkmark"></div>
+                    </label>
+                    <span class="label-text">I agree to the terms and conditions</span>
+                </div>
+
                 <!-- LOGIN -->
-                <button onclick="window.location.href='index.html';" class=" button1">LOGIN</button>
+                <button type="submit" class=" button1">SIGN UP</button>
             </form>
+
+            <div class="sign-up">
+                <p class="login-social-desc">Already have an account?</p>
+                <a href="login.html" class="signup-link">Login</a>
+            </div>
+
+
 
 
 
@@ -91,10 +105,7 @@
                 </div>
             </div>
 
-            <div class="sign-up">
-                <p class="login-social-desc">Or Sign Up Using</p>
-                <a href="sign-up.html" class="signup-link">SIGN UP</a>
-            </div>
+
         </div>
     </div>
 

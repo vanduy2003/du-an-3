@@ -66,7 +66,7 @@ a {
     line-height: 28px;
     /* identical to box height, or 175% */
     text-align: center;
-    color: #C9D2DA;
+    color: #e8ecef;
 }
 
 .navbar__link:hover {
@@ -143,10 +143,12 @@ input:hover {
     line-height: 28px;
     /* identical to box height, or 175% */
     text-align: right;
-    color: #C9D2DA;
+    color: #e7ecf0;
+    margin-right: 5px;
 }
 
-.header-action__signup {
+
+/* .header-action__signup {
     padding: 8px 25px;
     background: #2E80CE;
     border-radius: 22px;
@@ -154,11 +156,48 @@ input:hover {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    /* identical to box height, or 175% */
+    
     text-align: center;
     color: #FFFFFF;
     margin-left: 20px;
     cursor: pointer;
+} */
+
+.header-action__signup {
+    text-align: center;
+    width: 8em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.header-action__signup::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.header-action__signup:hover::before {
+    width: 8em;
+}
+
+.header-action__signup:hover {
+    color: white;
 }
 
 .hero {

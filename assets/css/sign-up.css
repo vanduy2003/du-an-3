@@ -40,79 +40,16 @@ body {
     text-shadow: 11px 37px 6px rgba(83, 37, 37, 0.23);
 }
 
-.img-avata {
-    text-align: center;
-    width: 200px;
-    display: flex;
-    margin: 0 auto;
-}
-
-.login-label {
-    font-weight: 600;
-    font-size: 15px;
-    text-align: center;
-    /* or 114% */
-    letter-spacing: -0.02em;
-    color: #000000;
-    cursor: pointer;
-}
-
-.login-label:nth-of-type(2) {
-    margin-top: 25px;
-    display: inline-block;
-}
-
 .login-form {
-    margin: -10px 43px 25px;
-}
-
-input {
-    width: 370px;
-    display: block;
-    padding: 15px 0;
-    border: none;
-    outline: 0;
-    flex-grow: 1;
-}
-
-.login-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 2px solid #8b6a6a;
-    background-color: white;
-    border-radius: 10px 0px 0px 0px;
-    padding-left: 10px;
-}
-
-.login-group:hover {
-    border-color: red;
-}
-
-::placeholder {
-    color: rgb(133, 126, 130);
-    font-size: 15px;
-}
-
-.link {
-    width: 150px;
-    text-decoration: none;
-    display: block;
-    font-weight: 400;
-    font-size: 16px;
-    color: #000000;
-    margin: 20px 40px 29px 268px;
-}
-
-.link:hover {
-    color: rgb(13, 0, 255);
+    margin: 43px;
+    margin-bottom: 25px;
 }
 
 
 /* --------CSS button animations ----------*/
 
 .button1 {
-    margin: 10px auto 30px;
+    margin: 20px auto 30px;
     text-align: center;
     line-height: 30px;
     display: block;
@@ -178,27 +115,41 @@ input {
 /* --------CSS button animations ----------*/
 
 .login-social {
+    position: relative;
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.login-social::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 395px;
+    top: -28px;
+    left: 51px;
+    height: 1px;
+    background-color: #555555;
 }
 
 .login-social-desc {
-    display: block;
-    font-weight: 400;
-    font-size: 16px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 28px;
     /* or 175% */
-    color: #6e808f;
-    margin-bottom: 10px;
+    color: #2a2828;
+    margin-right: 5px;
+    margin-bottom: 20px;
 }
 
 .socal-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border-radius: 13px;
+    width: 114px;
+    height: 48px;
     background-color: #006eff;
     fill: white;
 }
@@ -227,6 +178,7 @@ input {
 }
 
 .sign-up {
+    margin-top: -20px;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -237,7 +189,7 @@ input {
     font-size: 18px;
     line-height: 38px;
     /* or 175% */
-    color: #030303;
+    color: #0e7fff;
 }
 
 .signup-link:hover {
@@ -251,3 +203,129 @@ input {
 
 
 /* -------- SIGN UP ----------*/
+
+.inputBox {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 410px;
+}
+
+.inputBox input {
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #000000;
+    border: 2px solid#ee8456;
+    font-size: 1em;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 15px 20px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+    color: #ee8456;
+    letter-spacing: 0.1em;
+}
+
+.inputBox input:focus~span,
+.inputBox input:valid~span {
+    font-size: 0.9em;
+    transform: translateX(14px) translateY(-7.5px);
+    padding: 0 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 0em;
+    border: 1px solid #ee8456;
+}
+
+
+/* -------- checkbox ----------*/
+
+
+/* Hide the default checkbox */
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+}
+
+.label-text {
+    color: #5a5a5a;
+    font-size: 14px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px rgb(183, 183, 183);
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.container input:checked~.checkmark {
+    box-shadow: 3px 3px 0px rgb(183, 183, 183);
+    transition: all 0.2s;
+    opacity: 1;
+    background-image: linear-gradient(45deg, rgb(100, 61, 219) 0%, rgb(217, 21, 239) 100%);
+}
+
+.container input~.checkmark {
+    transition: all 0.2s;
+    opacity: 1;
+    box-shadow: 1px 1px 0px rgb(183, 183, 183);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
