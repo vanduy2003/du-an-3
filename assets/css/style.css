@@ -147,22 +147,6 @@ input:hover {
     margin-right: 5px;
 }
 
-
-/* .header-action__signup {
-    padding: 8px 25px;
-    background: #2E80CE;
-    border-radius: 22px;
-    border: none;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    
-    text-align: center;
-    color: #FFFFFF;
-    margin-left: 20px;
-    cursor: pointer;
-} */
-
 .header-action__signup {
     text-align: center;
     width: 8em;
